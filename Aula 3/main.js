@@ -46,25 +46,25 @@ if (a===5) {
 }
 */
 
-const carros = [
-    {nome:"Tesla", uso:"novo"},
-    {nome:"Berlinda", uso:"usado"},
-    {nome:"Fusca", uso:"usado"},
-    {nome:"Uno", uso:"novo"},
-    {nome:"Gol bola", uso:"usado"}
+const animais = [
+    {nome:"Gato", tipo:"Doméstico"},
+    {nome:"Cachorro", tipo:"Doméstico"},
+    {nome:"Pato", tipo:"Doméstico"},
+    {nome:"Leão", tipo:"Selvagem"},
+    {nome:"Peixe-boi", tipo:"Selvagem"}
 ]
 
-let saidaUsado="";
-let saidaNovo="";
+let animalSelvagem="";
+let animalDoméstico="";
 
-carros.forEach(copiaCarros=>{
-    if(copiaCarros.uso ==='novo'){
-        saidaNovo += `Nome: ${copiaCarros.nome}<br>`
+animais.forEach(analiseAnimais=>{
+    if(analiseAnimais.tipo ==='Doméstico'){
+        animalDoméstico += `Nome: ${analiseAnimais.nome}<br>`
     }
-    else if(copiaCarros.uso ==='usado'){
-        saidaUsado += `Nome: ${copiaCarros.nome}<br>`
+    else if(analiseAnimais.tipo ==='Selvagem'){
+        animalSelvagem += `Nome: ${analiseAnimais.nome}<br>`
     }
 })
 
-document.getElementById("carroUsados").innerHTML = saidaUsado
-document.getElementById("carroNovos").innerHTML = saidaNovo
+document.getElementById("animaisSelvagens").innerHTML = animalSelvagem
+document.getElementById("animaisDomesticos").innerHTML = animalDoméstico
